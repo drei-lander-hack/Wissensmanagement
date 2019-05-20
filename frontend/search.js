@@ -1,14 +1,6 @@
 (function () {
   'use strict'
 
-  var token = document.cookie.match(/\bTOKEN=([\w.-]*)/)
-  if (!token || !token[1]) {
-    location.href = ''
-  }
-  var headers = {
-    authorization: 'Bearer ' + token[1]
-  }
-
   var form = document.querySelector('#search')
   var result = document.querySelector('#result-list')
 
