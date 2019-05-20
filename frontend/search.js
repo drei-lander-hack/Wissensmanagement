@@ -55,6 +55,28 @@
   };
 
 
+  var closeButton = document.querySelector('.dialog-close')
+
+  closeButton.addEventListener('click', function (event) {
+    event.preventDefault()
+
+    body.classList.toggle('dialog-active')
+  });
+
+
+  var sendButton = document.querySelector('.dialog-send')
+
+  sendButton.addEventListener('click', function (event) {
+    event.preventDefault()
+
+    body.classList.toggle('dialog-active')
+    body.classList.toggle('show-message')
+
+    setTimeout(function(){
+      body.classList.toggle('show-message')
+    },3000);
+  });
+  
   
 
 })()
