@@ -1,6 +1,14 @@
 (function () {
   'use strict'
 
+  var token = document.cookie.match(/\bTOKEN=([\w.-]*)/)
+  if (!token || !token[1]) {
+    location.href = ''
+  }
+  var headers = {
+    authorization: 'Bearer ' + token[1]
+  }
+
   var form = document.querySelector('#search')
   var result = document.querySelector('#result-list')
 
@@ -8,7 +16,7 @@
     event.preventDefault()
 
     var search = form.elements['search'].value
-    fetch('/search?value=' + encodeURIComponent(search))
+    fetch('/search?value=' + encodeURIComponent(search), {headers})
       .then(function (result) {
         if (!result.ok) {
           return Promise.reject(result.statusText)
