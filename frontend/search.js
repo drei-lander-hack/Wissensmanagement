@@ -1,6 +1,8 @@
 (function () {
   'use strict'
 
+  var body = document.querySelector('body')
+
   var form = document.querySelector('#search')
   var result = document.querySelector('#result-list')
   var headers = {}
@@ -23,13 +25,36 @@
             '<img src="' + entry.picture + '" class="result__img">' +
             '<div class="result__inner">' +
             '<span class="result__name">' + entry.name + '</span>' +
-            '<a href="#" class="result__send-query">Anfrage senden <i class="fas fa-paper-plane"></i></a>' +
+            '<a href="#" class="result__send-query dialog-trigger">Anfrage senden <i class="fas fa-paper-plane"></i></a>' +
             '</div>' +
             '</li>'
         }).join('\n')
+
+        addDialogTriggerEvents()
       })
       .catch(function (error) {
         alert(error)
       })
   })
+
+  var addDialogTriggerEvents = function() {
+    var classname = document.getElementsByClassName("dialog-trigger");
+
+    for (var i = 0; i < classname.length; i++) {
+        classname[i].addEventListener('click', myFunction, false);
+    }
+
+  }
+
+  
+
+  var myFunction = function(event) {
+    event.preventDefault()  
+    
+    body.classList.toggle('dialog-active')
+  };
+
+
+  
+
 })()
