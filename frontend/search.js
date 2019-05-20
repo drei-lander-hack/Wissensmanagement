@@ -5,11 +5,11 @@
 
   var form = document.querySelector('#search')
   var result = document.querySelector('#result-list')
-  var headers = {}
 
   form.addEventListener('submit', function (event) {
     event.preventDefault()
 
+    var headers = {Authorization: 'Bearer ' + window.getToken()}
     var search = form.elements['search'].value
     fetch('/search?value=' + encodeURIComponent(search), {headers})
       .then(function (result) {
