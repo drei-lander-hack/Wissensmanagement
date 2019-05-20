@@ -3,6 +3,7 @@
 
   var form = document.querySelector('#search')
   var result = document.querySelector('#result-list')
+  var headers = {}
 
   form.addEventListener('submit', function (event) {
     event.preventDefault()
