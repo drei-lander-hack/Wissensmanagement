@@ -1,0 +1,22 @@
+{
+  "name": "wissensmanagement",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drei-lander-hack19/Wissensmanagement.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drei-lander-hack19/Wissensmanagement/issues"
+  },
+  "homepage": "https://github.com/drei-lander-hack19/Wissensmanagement#readme",
+  "dependencies": {
+    "express": "^4.17.0"
+  }
+}
