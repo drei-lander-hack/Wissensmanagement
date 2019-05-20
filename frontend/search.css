@@ -4,5 +4,42 @@
 .search {
     margin: 0 auto;
     max-width: 80%;
-    background: red;
+}
+
+label {
+    display: block;
+    width: 100%;
+}
+
+.search__box {
+    border: 1px solid #333;
+    padding: 10px 10px 10px 20px;
+    height: 35px;
+    display: flex;
+    border-radius: 5px;
+}
+
+.search__box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.search__btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    font-size: 0;
+    background: white;
+    height: 100%;
+    width: 45px;
+}
+
+.search__btn i {
+    font-size: 24px;
 }
