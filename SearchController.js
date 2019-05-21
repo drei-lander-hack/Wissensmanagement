@@ -1,39 +1,40 @@
 module.exports = ({logger}) => {
   return {
     search(text) {
-      return [ {
-        "name" : "Julia",
-        "rank" : 0.1,
-        "image" : "Julia.jpg",
-        "education" : "Magister",
-        "company" : "DB",
-        "skills" : [ "Networking", "Controlling", "Innovation", "Digitalisierung" ],
-        "projects" : [ "Pünktlichkeit", "Smart Rail" ]
+      return [{
+        "id": null,
+        "name": "Julia",
+        "skills": ["Networking​", "Controlling", "Innovation", "Digitalisierung"],
+        "projects": ["Pünktlichkeit", "Smart Rail", "WLan im Zug"],
+        "education": "Magister",
+        "company": "SBB",
+        "bearbeiteteDokumente": [],
+        "ersterEintrag": "0001-01-01T00:00:00",
+        "rank": 57.921646958180538,
+        "image": "Julia.jpg"
       }, {
-        "name" : "Romeo",
-        "rank" : 99.8,
-        "image" : "Romeo.jpg",
-        "education" : "Ingenieur",
-        "company" : "SBB",
-        "skills" : [ "Projektmananagement", "Networking" ],
-        "projects" : [ "Wlan im Zug", "Bahnhof" ]
+        "id": null,
+        "name": "Vreni",
+        "skills": ["Zahlen", "Projekte"],
+        "projects": ["Wlan"],
+        "education": "PhD in Finance",
+        "company": "SBB",
+        "bearbeiteteDokumente": [],
+        "ersterEintrag": "0001-01-01T00:00:00",
+        "rank": 10.411460399819289,
+        "image": "Vreni.jpg"
       }, {
-        "name" : "Hans",
-        "rank" : 54.8,
-        "image" : "Hans.jpg",
-        "education" : "Bachelor of Science in Business",
-        "company" : "DB",
-        "skills" : [ "Sprachen", "Projekte" ],
-        "projects" : [ "Zug" ]
-      }, {
-        "name" : "Vreni",
-        "rank" : 14.8,
-        "image" : "Vreni.jpg",
-        "education" : "PhD in Finance",
-        "company" : "ÖBB",
-        "skills" : [ "Zahlen", "Projekte" ],
-        "projects" : [ "Wlan" ]
-      } ]
+        "id": null,
+        "name": "Romeo",
+        "skills": ["Projektmananagement", "Networking"],
+        "projects": ["Wlan im Zug", "Bahnhof"],
+        "education": "Ingenieur",
+        "company": "ÖBB",
+        "bearbeiteteDokumente": [],
+        "ersterEintrag": "0001-01-01T00:00:00",
+        "rank": 9.4212386801006467,
+        "image": "Romeo.jpg"
+      }]
     }
   }
 }
