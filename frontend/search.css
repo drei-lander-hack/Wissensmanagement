@@ -20,6 +20,25 @@ body.dialog-active:after {
     left: 0;
 }
 
+header {
+    margin: 1em;
+}
+
+header:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+header .companies {
+    float: right;
+}
+
+header .companies img {
+    height: 30px;
+    margin-right: 20px;
+}
+
 .search {
     margin: 0 auto;
     max-width: 80%;
