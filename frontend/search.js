@@ -21,6 +21,10 @@
       })
       .then(function (list) {
         result.innerHTML = list.map(function (entry) {
+          const skills = entry.skills
+            .map(e => '<span class="tag">#' + e + '</span>')
+            .join(' ')
+
           return '<li class="result">' +
             '<img src="' + entry.image + '" class="result__img">' +
 
@@ -30,7 +34,7 @@
             '</span>' +
             '<span class="result__rank">' + entry.rank.toFixed() + '%</span>' +
             '<span class="result__projects">' + entry.projects.join(', ') + '</span>' +
-            '<span class="result__skills">' + entry.skills.map(e => '#' + e).join(' ') + '</span>' +
+            '<span class="result__skills">' + skills + '</span>' +
             '<a href="#" class="result__send-query dialog-trigger" data-name="'+ entry.name +'">Anfrage senden <i class="fas fa-paper-plane"></i></a>' +
             '</div>' +
             '</li>'

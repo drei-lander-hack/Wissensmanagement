@@ -145,6 +145,14 @@ input {
     margin-left: 5px;
 }
 
+.tag {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background: rgba(255, 130, 130, 0.74);
+    padding: 2px;
+    margin: 3px;
+}
+
 button,
 a {
     color: #e2002a;
