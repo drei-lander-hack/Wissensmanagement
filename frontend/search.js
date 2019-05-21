@@ -11,11 +11,7 @@
 
     var headers = {Authorization: 'Bearer ' + window.getToken()}
     var search = form.elements['search'].value
-<<<<<<< HEAD
-    fetch('/search?value=' + encodeURIComponent(search), {headers})
-=======
     fetch('https://tedevi.azurewebsites.net/api/users?value=' + encodeURIComponent(search), {headers})
->>>>>>> 7665426143659599bfa3e33de94b9f27cfe4fa1d
       .then(function (result) {
         if (!result.ok) {
           return Promise.reject(result.statusText)
@@ -31,7 +27,6 @@
 
           return '<li class="result">' +
             '<img src="' + entry.image + '" class="result__img">' +
-
             '<div class="result__inner">' +
             '<div>' +
             '<span class="result__name">' + entry.name + '</span>' +
