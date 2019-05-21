@@ -23,9 +23,12 @@
         result.innerHTML = list.map(function (entry) {
           return '<li class="result">' +
             '<img src="' + entry.image + '" class="result__img">' +
+
             '<div class="result__inner">' +
-            '<span class="result__name">' + entry.name + '</span>' +
-            '<span class="result__rank">' + entry.rank + '%</span>' +
+            '<span class="result__name">' + entry.name +
+            '<img class="result__company" src="img/' + entry.company.toLowerCase() + '.png">' +
+            '</span>' +
+            '<span class="result__rank">' + entry.rank.toFixed() + '%</span>' +
             '<span class="result__projects">' + entry.projects.join(', ') + '</span>' +
             '<span class="result__skills">' + entry.skills.map(e => '#' + e).join(' ') + '</span>' +
             '<a href="#" class="result__send-query dialog-trigger" data-name="'+ entry.name +'">Anfrage senden <i class="fas fa-paper-plane"></i></a>' +

@@ -140,8 +140,9 @@ input {
     display: block;
 }
 
-.result__send-query {
-    float: right;
+.result__company {
+    height: 20px;
+    margin-left: 5px;
 }
 
 button,
