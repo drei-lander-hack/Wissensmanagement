@@ -11,7 +11,7 @@
 
     var headers = {Authorization: 'Bearer ' + window.getToken()}
     var search = form.elements['search'].value
-    fetch('/search?value=' + encodeURIComponent(search), {headers})
+    fetch('http://localhost:4567/search?value=' + encodeURIComponent(search), {headers})
       .then(function (result) {
         if (!result.ok) {
           return Promise.reject(result.statusText)
