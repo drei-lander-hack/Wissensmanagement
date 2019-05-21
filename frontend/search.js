@@ -25,7 +25,7 @@
             '<img src="' + entry.picture + '" class="result__img">' +
             '<div class="result__inner">' +
             '<span class="result__name">' + entry.name + '</span>' +
-            '<a href="#" class="result__send-query dialog-trigger">Anfrage senden <i class="fas fa-paper-plane"></i></a>' +
+            '<a href="#" class="result__send-query dialog-trigger" data-name="'+ entry.name +'">Anfrage senden <i class="fas fa-paper-plane"></i></a>' +
             '</div>' +
             '</li>'
         }).join('\n')
@@ -50,7 +50,16 @@
 
   var openDialog = function(event) {
     event.preventDefault()  
+    var searchValue = document.querySelector('.search__input').value;
+    var contactNameField = document.querySelector('.dialog-contactname');
+    var messageField = document.querySelector('.dialog-contactmsg');
     
+    var contactName = event.target.getAttribute('data-name');
+    
+    contactNameField.value = contactName;
+    messageField.value = "Hallo " + contactName + "\n" +
+      "ich habe gesehen, du hast auch zum Thema " + searchValue + " gearbeitet.\nKönnen wir uns treffen?";
+
     body.classList.toggle('dialog-active')
   };
 

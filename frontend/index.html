@@ -9,7 +9,7 @@
 <form id="search" class="search">
     <div class="search__box">
         <label>
-            <input type="text" name="search">
+            <input type="text" class="search__input" name="search">
         </label>
 
         <button class="search__btn">Suchen <i class="fas fa-search"></i></button>
@@ -22,10 +22,9 @@
 
 <div class="dialog-send-query">
     <a href="#" class="dialog-close"><i class="fa fa-times" aria-hidden="true"></i></a>
-    Nachricht an: <input type="text" value="Ana Bauer" />
+    Nachricht an: <input type="text" class="dialog-contactname"  />
     Text:
-    <textarea rows="5">Hallo,&#013;&#010;ich habe gesehen, du hast auch zum Thema "Wlan am Zug" gearbeitet.&#013;&#010;Können wir uns treffen?
-    </textarea>
+    <textarea rows="5" class="dialog-contactmsg"></textarea>
     <button class="dialog-send">Senden</button>
 </div>
 
