@@ -1,2 +1,8 @@
 /.idea/
 /node_modules/
+*.suo
+*.user
+obj/
+bin/
+.vs/
+*/_NCrunch_*/
