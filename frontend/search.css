@@ -115,6 +115,14 @@ input {
     width: 100%;
 }
 
+.result__company {
+    margin-bottom: 10px;
+}
+
+.result__inner span {
+    display: block;
+}
+
 .result__img {
     display: block;
     width: 100px;
@@ -129,7 +137,9 @@ input {
 }
 
 .result__rank {
-
+    background: #ccc;
+    padding: 2px 4px;
+    font-size: 20px;
 }
 
 .result__projects {
@@ -138,6 +148,7 @@ input {
 
 .result__skills {
     display: block;
+    margin-top: 10px;
 }
 
 .result__company {
@@ -235,4 +246,11 @@ a:hover {
 .fa-info-circle {
     color: #e2002a;
     font-size: 24px;
+}
+
+.matching {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
 }

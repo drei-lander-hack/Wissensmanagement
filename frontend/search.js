@@ -11,7 +11,7 @@
 
     var headers = {Authorization: 'Bearer ' + window.getToken()}
     var search = form.elements['search'].value
-    fetch('https://dbobbsbb-hackaton.azurewebsites.net/api/users?value=' + encodeURIComponent(search), {headers})
+    fetch('/search?value=' + encodeURIComponent(search), {headers})
       .then(function (result) {
         if (!result.ok) {
           return Promise.reject(result.statusText)
@@ -29,13 +29,16 @@
             '<img src="' + entry.image + '" class="result__img">' +
 
             '<div class="result__inner">' +
-            '<span class="result__name">' + entry.name +
+            '<div>' +
+            '<span class="result__name">' + entry.name + '</span>' +
             '<img class="result__company" src="img/' + entry.company.toLowerCase() + '.png">' +
-            '</span>' +
-            '<span class="result__rank">' + entry.rank.toFixed() + '%</span>' +
             '<span class="result__projects">' + entry.projects.join(', ') + '</span>' +
             '<span class="result__skills">' + skills + '</span>' +
+            '</div>' +
+            '<div class="matching">' +
             '<a href="#" class="result__send-query dialog-trigger" data-name="'+ entry.name +'">Anfrage senden <i class="fas fa-paper-plane"></i></a>' +
+            '<span class="result__rank">' + entry.rank.toFixed() + '% Matching</span>' +
+            '</div>' +
             '</div>' +
             '</li>'
         }).join('\n')
