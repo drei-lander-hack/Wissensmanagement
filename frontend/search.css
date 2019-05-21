@@ -14,7 +14,7 @@ body.dialog-active:after {
     display: block;
     width: 100%;
     height: 100%;
-    background: rgb(0, 0, 0, .8);
+    background: rgb(89, 89, 89, .8);
     z-index: 2;
     top: 0;
     left: 0;
@@ -66,7 +66,7 @@ input {
     outline: none;
     font-size: 20px;
     padding: 10px 10px 10px 20px;
-    border: 1px solid #333;
+    border: 1px solid #7f7f7f;
     border-radius: 5px;
 }
 
@@ -100,7 +100,7 @@ input {
     align-items: flex-start;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #888;
+    border-bottom: 1px solid #7f7f7f;
 }
 
 .result__inner {
@@ -125,7 +125,7 @@ input {
 
 button,
 a {
-    color: green;
+    color: #e2002a;
     text-decoration: none;
     transition: color .20s ease;
     cursor: pointer;
@@ -133,7 +133,7 @@ a {
 
 button:hover,
 a:hover {
-    color: red;
+    color: #595959;
 }
 
 .dialog-send-query {
@@ -181,5 +181,10 @@ a:hover {
     display: block;
     opacity: 1;
     transform: translate(-50%, -50%);
-    box-shadow: 1px 3px 9px 0px black
+    box-shadow: 1px 3px 9px 0px #595959
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
 }
