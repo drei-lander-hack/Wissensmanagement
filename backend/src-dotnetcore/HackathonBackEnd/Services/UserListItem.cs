@@ -4,6 +4,8 @@ namespace HackathonBackEnd.Services
 {
     public class UserListItem
     {
+        public string Id { get; set; }
+
         public string Name { get; set; }
 
         public string[] Skills { get; set; }
