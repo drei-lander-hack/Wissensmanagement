@@ -123,6 +123,10 @@ input {
     display: block;
 }
 
+.result__inner span span {
+    display: inline;
+}
+
 .result__img {
     display: block;
     width: 100px;
