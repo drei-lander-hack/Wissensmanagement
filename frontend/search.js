@@ -11,7 +11,7 @@
 
     var headers = {Authorization: 'Bearer ' + window.getToken()}
     var search = form.elements['search'].value
-    fetch('https://dbobbsbb-hackaton.azurewebsites.net/api/users?value=' + encodeURIComponent(search), {headers})
+    fetch('https://tedevi.azurewebsites.net/api/users?value=' + encodeURIComponent(search), {headers})
       .then(function (result) {
         if (!result.ok) {
           return Promise.reject(result.statusText)
