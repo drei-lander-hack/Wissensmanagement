@@ -124,6 +124,22 @@ input {
     font-size: 1.2rem;
 }
 
+.result__rank {
+
+}
+
+.result__projects {
+    display: block;
+}
+
+.result__skills {
+    display: block;
+}
+
+.result__send-query {
+    float: right;
+}
+
 button,
 a {
     color: #e2002a;
