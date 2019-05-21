@@ -22,7 +22,7 @@
       .then(function (list) {
         result.innerHTML = list.map(function (entry) {
           return '<li class="result">' +
-            '<img src="' + entry.picture + '" class="result__img">' +
+            '<img src="' + entry.image + '" class="result__img">' +
             '<div class="result__inner">' +
             '<span class="result__name">' + entry.name + '</span>' +
             '<a href="#" class="result__send-query dialog-trigger" data-name="'+ entry.name +'">Anfrage senden <i class="fas fa-paper-plane"></i></a>' +
