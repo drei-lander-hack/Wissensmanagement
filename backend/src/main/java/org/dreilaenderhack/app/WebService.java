@@ -17,6 +17,7 @@ import org.dreilaenderhack.model.Document;
 import org.dreilaenderhack.model.Person;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.microsoft.aad.adal4j.AuthenticationResult;
 
 
 
@@ -57,20 +58,33 @@ public class WebService {
 		 
 		 get("/search",(request, response) -> {
 			 
-
-			 /*
+			
+			 
 			    String bearerToken = null;
 				String auth = request.headers("Authorization");
 				if(auth != null && auth.startsWith("Bearer")) {
 					bearerToken = auth.substring("Bearer".length()).trim();
 				}
-			 
+				
+				System.out.println("token "+bearerToken);
+				
 				if(bearerToken == null || bearerToken.isEmpty())
 				{
 					response.header("WWW-Authenticate", "Bearer");
 			        halt(401, "You need a Bearer token");
 				}
-			 */
+				
+				PublicClient client = new PublicClient();
+				
+					AuthenticationResult result = client.getAccessTokenFromUserCredentials(bearerToken);
+					System.out.println("Access Token - " + result.getAccessToken());
+			        System.out.println("Refresh Token - " + result.getRefreshToken());
+			        System.out.println("ID Token - " + result.getIdToken());
+					String system = client.getUserInfoFromGraph(result.getAccessToken());
+					System.out.println(system);
+				
+				
+			
 			 
 			    response.type("application/json");
 			  
@@ -92,12 +106,7 @@ public class WebService {
 					p1.setImage("Julia.jpg");
 					
 					p1.addDocumentsItem(new Document("WLAN_Zug.pptx","05.07.2017"));
-				
-
-										
-					
-					
-					
+												
 				    data.add(p1);
 			    }
 			    
