@@ -70,6 +70,7 @@ input {
     border-radius: 5px;
 }
 
+
 .search__btn {
     display: inline-block;
     font-weight: 400;
@@ -184,7 +185,25 @@ a:hover {
     box-shadow: 1px 3px 9px 0px #595959
 }
 
+.dialog-contactname {
+    margin-bottom: 10px;
+}
+
+.dialog-send {
+    align-self: flex-end;
+    margin-top: 10px;
+    background: white;
+    border: 1px solid #7f7f7f;
+    border-radius: 5px;
+    line-height: 24px;
+}
+
 .logo {
     display: block;
     margin: 0 auto;
+}
+
+.fa-info-circle {
+    color: #e2002a;
+    font-size: 24px;
 }
