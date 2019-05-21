@@ -23,11 +23,24 @@ namespace HackathonBackEnd.Controllers
             .GetUserListItems())
             .Where(user =>
             {
+                var terms = value.Split(' ');
                 if (string.IsNullOrWhiteSpace(value)) return true;
-                if (user.Name?.StartsWith(value) ?? false) return true;
-                if (user.Projects.Any(project => project.Contains(value))) return true;
-                if (user.Skills.Any(skill => skill.Contains(value))) return true;
-                return false;
-            });
+
+                return
+                    Contains(user.Name, terms) ||
+                    Contains(user.Projects, terms) ||
+                    Contains(user.Skills, terms);
+            })
+            .OrderByDescending(user => user.Rank);
+
+        private static bool Contains(string word, IEnumerable<string> terms)
+        {
+            return Contains(new string[] { word }, terms);
+        }
+
+        private static bool Contains(IEnumerable<string> words, IEnumerable<string> terms)
+        {
+            return terms.All(term => words.Any(word => word != null && word.Contains(term, System.StringComparison.OrdinalIgnoreCase)));
+        }
     }
 }
