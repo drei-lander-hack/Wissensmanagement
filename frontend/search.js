@@ -41,14 +41,14 @@
     var classname = document.getElementsByClassName("dialog-trigger");
 
     for (var i = 0; i < classname.length; i++) {
-        classname[i].addEventListener('click', myFunction, false);
+        classname[i].addEventListener('click', openDialog, false);
     }
 
   }
 
   
 
-  var myFunction = function(event) {
+  var openDialog = function(event) {
     event.preventDefault()  
     
     body.classList.toggle('dialog-active')
