@@ -9,7 +9,7 @@ module.exports = ({logger}) => {
         "company": "ÖBB",
         "bearbeiteteDokumente": [],
         "ersterEintrag": "0001-01-01T00:00:00",
-        "rank": 87.36420340713309,
+        "rank": 100,
         "image": "Romeo.jpg"
       }, {
         "name": "Julia",
